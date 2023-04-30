@@ -59,15 +59,15 @@
                                     @endforeach
                                 </select>
                             </div>
-
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="exam_id" class="col-lg-3 col-form-label font-weight-semibold">Description</label>
-                            <div class="col-lg-9">
-                                <textarea class="form-control" name="description"  rows="3"  required type="text" placeholder="Description">{{ $s->description }}</textarea>
+                            <div class="form-group row">
+                                <label for="exam_id" class="col-lg-3 col-form-label font-weight-semibold">Description</label>
+                                <div class="col-lg-9">
+                                    <textarea class="form-control" name="description"  rows="3"  required type="text" placeholder="Description">{{ $s->description }}</textarea>
+                                </div>
                             </div>
                         </div>
+
+
 
 
                         <div class="text-right">

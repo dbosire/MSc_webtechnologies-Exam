@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('page_title', 'Edit TimeTable Record')
+@section('page_title', 'Edit Curricula Record')
 @section('content')
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Edit TimeTable Record</h6>
+            <h6 class="card-title">Edit Curricula Record</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="my_class_id" class="col-lg-3 col-form-label font-weight-semibold">Class <span class="text-danger">*</span></label>
+                        <label for="my_class_id" class="col-lg-3 col-form-label font-weight-semibold">School <span class="text-danger">*</span></label>
                         <div class="col-lg-9">
                             <select required data-placeholder="Select Class" class="form-control select" name="my_class_id" id="my_class_id">
                                 @foreach($my_classes as $mc)
@@ -30,17 +30,15 @@
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <label for="exam_id" class="col-lg-3 col-form-label font-weight-semibold">Type (Class or Exam)</label>
-                        <div class="col-lg-9">
-                            <select class="select form-control" name="exam_id" id="exam_id">
-                                <option value="">Class Timetable</option>
-                                @foreach($exams as $ex)
-                                    <option {{ $ttr->exam_id == $ex->id ? 'selected' : '' }} value="{{ $ex->id }}">{{ $ex->name }}</option>
-                                @endforeach
-                            </select>
+
+
+                        <div class="form-group row">
+                            <label for="exam_id" class="col-lg-3 col-form-label font-weight-semibold">Description</label>
+                            <div class="col-lg-9">
+                                <textarea class="form-control" name="description" id="description" rows="3">{{$mc->description}}</textarea>
+                            </div>
                         </div>
-                    </div>
+
 
 
                     <div class="text-right">
